@@ -1,0 +1,25 @@
+#galinha-normal {
+    height: 32px;
+    width: 32px;
+    background: url("../img/Galinha1_Spritesheet.png") 0px 0px;
+    animation: play 0.8s steps(6) infinite;
+}
+
+@keyframes play {
+    100% {
+        background-position: -192px;
+    }
+}
+
+#galinha-rara {
+    height: 32px;
+    width: 32px;
+    background: url("../img/Galinha5_Spritesheet.png") 0px 0px;
+    animation: play2 0.8s steps(6) infinite;
+}
+
+@keyframes play2 {
+    100% {
+        background-position: -192px;
+    }
+}
