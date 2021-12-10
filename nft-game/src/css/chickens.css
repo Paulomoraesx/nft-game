@@ -1,0 +1,467 @@
+.gw1_1 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/1_1.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw2_1 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/2_1.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw3_1 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/3_1.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw4_1 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/4_1.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw5_1 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/5_1.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw6_1 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/6_1.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw7_1 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/7_1.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw1_2 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/1_2.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw2_2 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/2_2.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw3_2 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/3_2.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw4_2 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/4_2.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw5_2 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/5_2.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw6_2 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/6_2.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gw7_2 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/7_2.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gwp2 {
+  height: 68px;
+  width: 67px;
+  background: url("../img/great/walking/2.png") 0px 0px;
+  animation: play 0.8s steps(6) infinite;
+}
+
+.gp1_1 {
+  height: 68px;
+  width: 77.6px;
+  background: url("../img/great/pecking/1_1.png") 0px 0px;
+  animation: playpecking 1.5s steps(10) infinite;
+}
+
+.gp2_1 {
+  height: 68px;
+  width: 77.6px;
+  background: url("../img/great/pecking/2_1.png") 0px 0px;
+  animation: playpecking 1.5s steps(10) infinite;
+}
+
+.gp3_1 {
+  height: 68px;
+  width: 77.6px;
+  background: url("../img/great/pecking/3_1.png") 0px 0px;
+  animation: playpecking 1.5s steps(10) infinite;
+}
+
+.gp4_1 {
+  height: 68px;
+  width: 77.6px;
+  background: url("../img/great/pecking/4_1.png") 0px 0px;
+  animation: playpecking 1.5s steps(10) infinite;
+}
+
+.gp5_1 {
+  height: 68px;
+  width: 77.6px;
+  background: url("../img/great/pecking/5_1.png") 0px 0px;
+  animation: playpecking 1.5s steps(10) infinite;
+}
+
+.gp6_1 {
+  height: 68px;
+  width: 77.6px;
+  background: url("../img/great/pecking/6_1.png") 0px 0px;
+  animation: playpecking 0.8s steps(10) infinite;
+}
+
+.gp7_1 {
+  height: 68px;
+  width: 77.6px;
+  background: url("../img/great/pecking/7_1.png") 0px 0px;
+  animation: playpecking 1.5s steps(10) infinite;
+}
+
+.gp1_2 {
+  height: 68px;
+  width: 93px;
+  background: url("../img/great/pecking/1_2.png") 0px 0px;
+  animation: playpeckingrooster 1.5s steps(10) infinite;
+}
+
+.gp2_2 {
+  height: 68px;
+  width: 93px;
+  background: url("../img/great/pecking/2_2.png") 0px 0px;
+  animation: playpeckingrooster 1.5s steps(10) infinite;
+}
+
+.gp3_2 {
+  height: 68px;
+  width: 93px;
+  background: url("../img/great/pecking/3_2.png") 0px 0px;
+  animation: playpeckingrooster 1.5s steps(10) infinite;
+}
+
+.gp4_2 {
+  height: 68px;
+  width: 93px;
+  background: url("../img/great/pecking/4_2.png") 0px 0px;
+  animation: playpeckingrooster 1.5s steps(10) infinite;
+}
+
+.gp5_2 {
+  height: 68px;
+  width: 93px;
+  background: url("../img/great/pecking/5_2.png") 0px 0px;
+  animation: playpeckingrooster 1.5s steps(10) infinite;
+}
+
+.gp6_2 {
+  height: 68px;
+  width: 93px;
+  background: url("../img/great/pecking/6_2.png") 0px 0px;
+  animation: playpeckingrooster 1.5s steps(10) infinite;
+}
+
+.gp7_2 {
+  height: 68px;
+  width: 93px;
+  background: url("../img/great/pecking/7_2.png") 0px 0px;
+  animation: playpeckingrooster 1.5s steps(10) infinite;
+}
+
+.gpp2 {
+  height: 68px;
+  width: 64px;
+  background: url("../img/great/pecking/2.png") 0px 0px;
+  animation: playpeckingchick 1.5s steps(10) infinite;
+}
+
+.sw1_1 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/1_1.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw2_1 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/2_1.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw3_1 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/3_1.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw4_1 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/4_1.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw5_1 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/5_1.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw6_1 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/6_1.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw7_1 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/7_1.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw1_2 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/1_2.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw2_2 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/2_2.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw3_2 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/3_2.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw4_2 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/4_2.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw5_2 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/5_2.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw6_2 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/6_2.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sw7_2 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/7_2.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.swp2 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/walking/2.png") 0px 0px;
+  animation: playsmall 0.8s steps(6) infinite;
+}
+
+.sp1_1 {
+  height: 32px;
+  width: 37px;
+  background: url("../img/small/pecking/1_1.png") 0px 0px;
+  animation: playsmallchicken 1.3s steps(10) infinite;
+}
+
+.sp2_1 {
+  height: 32px;
+  width: 37px;
+  background: url("../img/small/pecking/2_1.png") 0px 0px;
+  animation: playsmallchicken 1.3s steps(10) infinite;
+}
+
+.sp3_1 {
+  height: 32px;
+  width: 37px;
+  background: url("../img/small/pecking/3_1.png") 0px 0px;
+  animation: playsmallchicken 1.3s steps(10) infinite;
+}
+
+.sp4_1 {
+  height: 32px;
+  width: 37px;
+  background: url("../img/small/pecking/4_1.png") 0px 0px;
+  animation: playsmallchicken 1.3s steps(10) infinite;
+}
+
+.sp5_1 {
+  height: 32px;
+  width: 37px;
+  background: url("../img/small/pecking/5_1.png") 0px 0px;
+  animation: playsmallchicken 1.3s steps(10) infinite;
+}
+
+.sp6_1 {
+  height: 32px;
+  width: 37px;
+  background: url("../img/small/pecking/6_1.png") 0px 0px;
+  animation: playsmallchicken 1.3s steps(10) infinite;
+}
+
+.sp7_1 {
+  height: 32px;
+  width: 37px;
+  background: url("../img/small/pecking/7_1.png") 0px 0px;
+  animation: playsmallchicken 1.3s steps(10) infinite;
+}
+
+.sp1_2 {
+  height: 32px;
+  width: 45px;
+  background: url("../img/small/pecking/1_2.png") 0px 0px;
+  animation: playsmallrooster 1.3s steps(10) infinite;
+}
+
+.sp2_2 {
+  height: 32px;
+  width: 45px;
+  background: url("../img/small/pecking/2_2.png") 0px 0px;
+  animation: playsmallrooster 1.3s steps(10) infinite;
+}
+
+.sp3_2 {
+  height: 32px;
+  width: 45px;
+  background: url("../img/small/pecking/3_2.png") 0px 0px;
+  animation: playsmallrooster 1.3s steps(10) infinite;
+}
+
+.sp4_2 {
+  height: 32px;
+  width: 45px;
+  background: url("../img/small/pecking/4_2.png") 0px 0px;
+  animation: playsmallrooster 1.3s steps(10) infinite;
+}
+
+.sp5_2 {
+  height: 32px;
+  width: 45px;
+  background: url("../img/small/pecking/5_2.png") 0px 0px;
+  animation: playsmallrooster 1.3s steps(10) infinite;
+}
+
+.sp6_2 {
+  height: 32px;
+  width: 45px;
+  background: url("../img/small/pecking/6_2.png") 0px 0px;
+  animation: playsmallrooster 1.3s steps(10) infinite;
+}
+
+.sp7_2 {
+  height: 32px;
+  width: 45px;
+  background: url("../img/small/pecking/7_2.png") 0px 0px;
+  animation: playsmallrooster 1.3s steps(10) infinite;
+}
+
+.spp2 {
+  height: 32px;
+  width: 32px;
+  background: url("../img/small/pecking/2.png") 0px 0px;
+  animation: playpeckingchicksmall 1.3s steps(10) infinite;
+}
+
+@keyframes play {
+  100% {
+      background-position: -402px;
+  }
+}
+
+@keyframes playpecking {
+  100% {
+      background-position: -776px;
+  }
+}
+
+@keyframes playpeckingrooster {
+  100% {
+      background-position: -944px;
+  }
+}
+
+@keyframes playsmallrooster {
+  100% {
+      background-position: -450px;
+  }
+}
+
+@keyframes playsmallchicken {
+  100% {
+      background-position: -370px;
+  }
+}
+
+@keyframes playpeckingchick {
+  100% {
+      background-position: -670px;
+  }
+}
+
+@keyframes playpeckingchicksmall {
+  100% {
+      background-position: -320px;
+  }
+}
+
+@keyframes playsmall {
+  100% {
+      background-position: -192px;
+  }
+}

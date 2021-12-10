@@ -4,114 +4,116 @@ import { Box, Center, Container, Flex, Grid, GridItem, Spacer, Text } from '@cha
 import NavMenu from './Layout/NavMenu';
 import { Button } from '@chakra-ui/button';
 import '../css/style.css'
+import '../css/chickens.css'
 import axios from 'axios';
 import { BASE_URL } from '../Utils/requests';
 
 const styles = {
-    cardVendaGalinha: {
-        width: "300px",
-        border: "1px solid #696969",
-        margin: "3px",
-    },
-    ajustarAoCentro: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
-    }
+	cardVendaGalinha: {
+		width: "300px",
+		border: "1px solid #696969",
+		margin: "3px",
+	},
+	ajustarAoCentro: {
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center"
+	}
 }
-var token = sessionStorage.getItem("token")
+var token = localStorage.getItem("token")
 const config = {
-    headers: { Authorization: `Bearer ${token}` }
+	headers: { Authorization: `Bearer ${token}` }
 };
 
 const mintBox = () => {
-    axios.get(`${BASE_URL}/mint/chicken/1`, config)
-        .then(response => {
-            console.log(response.data.rarity_name);
-        })
-        .catch(function (error) {
-            console.log(error);
-            console.log(token)
-        })
+	axios.get(`${BASE_URL}/mint/chicken/1`, config)
+		.then(response => {
+			console.log(response.data.rarity_name);
+		})
+		.catch(function (error) {
+			console.log(error);
+			console.log(token)
+		})
 }
 
 export default function CardGalinha() {
-    const { Moralis } = useMoralis();
-    var galinhaNormal = "0.07"
-    var galinhaRara = "0.1"
+	const { Moralis } = useMoralis();
+	var galinhaNormal = "0.07"
+	var galinhaRara = "0.1"
 
-    const transferBSC = (valor) => {
-        Moralis.transfer({
-            type: "native",
-            amount: Moralis.Units.ETH(valor),
-            receiver: "0xab609B70271b768e592B48028c211E12FCE3184D"
-        });
-    }
-    function testarToken() {
-        console.log(localStorage.getItem('token'))
-    }
+	const transferBSC = (valor) => {
+		Moralis.transfer({
+			type: "native",
+			amount: Moralis.Units.ETH(valor),
+			receiver: "0xab609B70271b768e592B48028c211E12FCE3184D"
+		});
+	}
+	function testarToken() {
+		console.log(localStorage.getItem('token'))
+	}
 
-    return (
-        <>
-            <NavMenu />
-            <Text fontSize="3xl" style={{ display: "flex", justifyContent: "center", padding: "10px" }}
-            >Comprar NFTs</Text>
-            <Container>
-                <Center>
-                    <Grid templateColumns="repeat(4, 1fr)">
-                        <GridItem colSpan={1}>
-                            <Flex align="center"
-                                justify="center"
-                                direction="column"
-                                p={10}
-                                style={styles.cardVendaGalinha}>
-                                <div id="galinha-normal" />
-                                <Box p={1} mt={5} style={styles.ajustarAoCentro}>
-                                    <Text>Galinha Normal</Text>
-                                    <Text>0,07 BNB</Text>
-                                    <Button mt={5}
-                                        onClick={() => transferBSC(galinhaNormal)}>Comprar</Button>
-                                </Box>
-                            </Flex>
-                        </GridItem>
-                        <Spacer />
-                        <GridItem colSpan={1}>
-                            <Flex align="center"
-                                justify="center"
-                                direction="column"
-                                p={10}
-                                style={styles.cardVendaGalinha}>
-                                <div id="galinha-rara" />
-                                {/* <Image style={{ marginLeft: "40px" }} width={75} src={galinha2} /> */}
-                                <Box p={1} mt={5} style={styles.ajustarAoCentro}>
-                                    <Text>Galinha Rara</Text>
-                                    <Text>0,1 BNB</Text>
-                                    <Button mt={5}
-                                        onClick={() => transferBSC(galinhaRara)}>Comprar</Button>
-                                </Box>
-                            </Flex>
-                        </GridItem>
-                        <GridItem colSpan={1}>
-                            <Flex align="center"
-                                justify="center"
-                                direction="column"
-                                p={10}
-                                style={styles.cardVendaGalinha}>
-                                <div id="galinha-rara" />
-                                {/* <Image style={{ marginLeft: "40px" }} width={75} src={galinha2} /> */}
-                                <Box p={1} mt={5} style={styles.ajustarAoCentro}>
-                                    <Text>BOX - RANDOM</Text>
-                                    <Text>250 EGGCOIN</Text>
-                                    <Button mt={5}
-                                        onClick={() => mintBox()}>Comprar</Button>
-                                </Box>
-                            </Flex>
-                        </GridItem>
-                    </Grid>
-                </Center>
-            </Container>
-        </>
-    )
+	return (
+		<>
+			<NavMenu />
+			<Text fontSize="3xl" style={{ display: "flex", justifyContent: "center", padding: "10px" }}>
+				Comprar NFTs
+			</Text>
+			<Container>
+				<Center>
+					<Grid templateColumns="repeat(4, 1fr)">
+						<GridItem colSpan={1}>
+							<Flex align="center"
+								justify="center"
+								direction="column"
+								p={10}
+								style={styles.cardVendaGalinha}>
+								<div class="gp7_2" />
+								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
+									<Text>Galinha Normal</Text>
+									<Text>0,07 BNB</Text>
+									<Button mt={5}
+										onClick={() => transferBSC(galinhaNormal)}>Comprar</Button>
+								</Box>
+							</Flex>
+						</GridItem>
+						<Spacer />
+						<GridItem colSpan={1}>
+							<Flex align="center"
+								justify="center"
+								direction="column"
+								p={10}
+								style={styles.cardVendaGalinha}>
+								<div class="gw2_1" />
+								{/* <Image style={{ marginLeft: "40px" }} width={75} src={galinha2} /> */}
+								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
+									<Text>Galinha Rara</Text>
+									<Text>0,1 BNB</Text>
+									<Button mt={5}
+										onClick={() => transferBSC(galinhaRara)}>Comprar</Button>
+								</Box>
+							</Flex>
+						</GridItem>
+						<GridItem colSpan={1}>
+							<Flex align="center"
+								justify="center"
+								direction="column"
+								p={10}
+								style={styles.cardVendaGalinha}>
+								<div class="gw2_2" />
+								{/* <Image style={{ marginLeft: "40px" }} width={75} src={galinha2} /> */}
+								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
+									<Text>BOX - RANDOM</Text>
+									<Text>250 EGGCOIN</Text>
+									<Button mt={5}
+										onClick={() => mintBox()}>Comprar</Button>
+								</Box>
+							</Flex>
+						</GridItem>
+					</Grid>
+				</Center>
+			</Container>
+		</>
+	)
 }
 
