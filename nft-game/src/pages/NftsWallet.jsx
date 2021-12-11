@@ -8,6 +8,7 @@ import { BASE_URL } from '../Utils/requests'
 import { CONFIG } from '../Utils/config'
 import { Button } from '@chakra-ui/react'
 import '../css/chickens.css'
+import '../css/border.css'
 
 
 function gender(g) {
@@ -48,6 +49,11 @@ function renderImage(a, b) {
 	return "gw" + a + "_" + b
 }
 
+function renderBorder(a) {
+	return "b" + a
+}
+
+
 const Nfts = ({ nfts }) => {
 	return (
 		<Container display={"flex"} flexDirection={"column"}>
@@ -57,7 +63,9 @@ const Nfts = ({ nfts }) => {
 					align="center"
 					justify="center"
 					direction="column" p={5} borderWidth="1px" borderRadius="lg">
-					<p class={renderImage(nfts.breed, nfts.gender)}></p>
+					<div class={renderBorder(nfts.rarity)}>
+						<p class={renderImage(nfts.breed, nfts.gender)}></p>
+					</div>
 					<h3>{rarity(nfts.rarity)}</h3>
 					<p> atk: {nfts.atk}</p>
 					<p> res: {nfts.res}</p>

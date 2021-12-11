@@ -5,6 +5,7 @@ import NavMenu from './Layout/NavMenu';
 import { Button } from '@chakra-ui/button';
 import '../css/style.css'
 import '../css/chickens.css'
+import '../css/border.css'
 import axios from 'axios';
 import { BASE_URL } from '../Utils/requests';
 import { CONFIG } from '../Utils/config';
@@ -64,8 +65,11 @@ export default function CardGalinha() {
 								direction="column"
 								p={10}
 								style={styles.cardVendaGalinha}>
-								<div className="gp7_2" />
-								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
+									<Box p={1} mt={5} style={styles.ajustarAoCentro}>
+								<div class="b1">
+									<div className="gp7_2" />
+								</div>
+								
 									<Text>Galinha Normal</Text>
 									<Text>0,07 BNB</Text>
 									<Button mt={5}
