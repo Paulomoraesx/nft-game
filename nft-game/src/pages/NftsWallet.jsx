@@ -107,13 +107,9 @@ export default function NftsWallet() {
 					</GridItem>
 					<GridItem colSpan={7}>
 						<Container p={5} maxW='container.xl' borderWidth="1px" borderRadius="lg">
-							<Flex /* style={styles.mainCard} */>
-								<Container>
-									<div>
-										{Array.isArray(lista) && lista.map((nfts) => <Nfts nfts={nfts} key={nfts.id} />)}
-									</div>
-								</Container>
-							</Flex>
+							<Grid templateColumns='repeat(4, 1fr)' gap={5}>
+								{Array.isArray(lista) && lista.map((nfts) => <Nfts nfts={nfts} key={nfts.id} />)}
+							</Grid>
 						</Container>
 					</GridItem>
 				</Grid>
