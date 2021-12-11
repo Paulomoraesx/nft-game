@@ -1,8 +1,6 @@
-import { Button } from '@chakra-ui/button';
 import { Image } from '@chakra-ui/image';
-import { Input } from '@chakra-ui/input';
-import { Box, Center, Container, Grid, GridItem, Heading, Spacer, Stack, Text } from '@chakra-ui/layout';
-import React, { useState } from 'react'
+import { Box, Center, Container, Grid, GridItem, Heading, Stack, Text } from '@chakra-ui/layout';
+import React from 'react'
 import { useMoralis } from 'react-moralis';
 import ErrorBox from './ErrorBox';
 import NavMenu from './Layout/NavMenu';
@@ -34,7 +32,7 @@ import NavMenu from './Layout/NavMenu';
 
 export default function Auth() {
 
-    const { authenticate, isAuthenticating, authError, user } = useMoralis();
+    const { authError, user } = useMoralis();
 
     /*     const teste = () => {
             Moralis.transfer({ type: "native", receiver: "", amount: Moralis.Units.Token('') })

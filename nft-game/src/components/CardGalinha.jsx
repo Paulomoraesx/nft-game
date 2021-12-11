@@ -7,6 +7,7 @@ import '../css/style.css'
 import '../css/chickens.css'
 import axios from 'axios';
 import { BASE_URL } from '../Utils/requests';
+import { CONFIG } from '../Utils/config';
 
 const styles = {
 	cardVendaGalinha: {
@@ -21,19 +22,16 @@ const styles = {
 		alignItems: "center"
 	}
 }
-var token = localStorage.getItem("token")
-const config = {
-	headers: { Authorization: `Bearer ${token}` }
-};
+
+
 
 const mintBox = () => {
-	axios.get(`${BASE_URL}/mint/chicken/1`, config)
+	axios.get(`${BASE_URL}/mint/chicken/1`, CONFIG)
 		.then(response => {
 			console.log(response.data.rarity_name);
 		})
 		.catch(function (error) {
 			console.log(error);
-			console.log(token)
 		})
 }
 
@@ -49,9 +47,7 @@ export default function CardGalinha() {
 			receiver: "0xab609B70271b768e592B48028c211E12FCE3184D"
 		});
 	}
-	function testarToken() {
-		console.log(localStorage.getItem('token'))
-	}
+
 
 	return (
 		<>
@@ -68,7 +64,7 @@ export default function CardGalinha() {
 								direction="column"
 								p={10}
 								style={styles.cardVendaGalinha}>
-								<div class="gp7_2" />
+								<div className="gp7_2" />
 								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
 									<Text>Galinha Normal</Text>
 									<Text>0,07 BNB</Text>
@@ -84,7 +80,7 @@ export default function CardGalinha() {
 								direction="column"
 								p={10}
 								style={styles.cardVendaGalinha}>
-								<div class="gw2_1" />
+								<div className="gw2_1" />
 								{/* <Image style={{ marginLeft: "40px" }} width={75} src={galinha2} /> */}
 								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
 									<Text>Galinha Rara</Text>
@@ -100,7 +96,7 @@ export default function CardGalinha() {
 								direction="column"
 								p={10}
 								style={styles.cardVendaGalinha}>
-								<div class="gw2_2" />
+								<div className="gw2_2" />
 								{/* <Image style={{ marginLeft: "40px" }} width={75} src={galinha2} /> */}
 								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
 									<Text>BOX - RANDOM</Text>

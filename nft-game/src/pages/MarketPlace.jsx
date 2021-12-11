@@ -1,15 +1,9 @@
-import { Button } from '@chakra-ui/button'
-import { Box, Center, Container, Flex, Grid, GridItem, Text } from '@chakra-ui/layout'
+import { Container, Flex, Grid, GridItem, Text } from '@chakra-ui/layout'
 import React from 'react'
 import NavMenu from '../components/Layout/NavMenu'
 import CardMkt from '../components/CardMkt'
 import SideMenu from '../components/Layout/SideMenu'
 
-const styles = {
-    mainCard: {
-        maxWidth: "200vh"
-    }
-}
 
 export default function MarketPlace() {
 
@@ -17,7 +11,7 @@ export default function MarketPlace() {
         <>
             <NavMenu />
             <Text fontSize="3xl" style={{ display: "flex", justifyContent: "center", padding: "10px" }}
-                strong>MarketPlace</Text>
+            >MarketPlace</Text>
             <Container p={10} maxW="container.xl" borderWidth="1px" borderRadius="lg">
                 <Grid templateColumns="repeat(8, 1fr)">
                     <GridItem p={5} colSpan={1}>

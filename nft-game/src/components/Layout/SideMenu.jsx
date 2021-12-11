@@ -16,7 +16,7 @@ export default function SideMenu() {
                 <Text>Filters:</Text>
                 <Box>
                     <Text>Rarity</Text>
-                    <RangeSlider aria-label={['min', 'max']} defaultValue={[1, 100]}>
+                    <RangeSlider aria-label="'min', 'max'" defaultValue={[1, 100]}>
                         <RangeSliderTrack>
                             <RangeSliderFilledTrack />
                         </RangeSliderTrack>

@@ -1,5 +1,5 @@
 import { Button } from '@chakra-ui/button'
-import { Box, Heading } from '@chakra-ui/layout'
+import { Box } from '@chakra-ui/layout'
 import React from 'react'
 import { useMoralis } from 'react-moralis'
 import { Link } from 'react-router-dom'
@@ -9,7 +9,7 @@ import NavMenu from '../components/Layout/NavMenu';
 
 
 export default function Home() {
-    const { Moralis, user } = useMoralis();
+    const { Moralis } = useMoralis();
 
     const transferBSC = () => {
         Moralis.transfer({
