@@ -45,12 +45,43 @@ function rarity(r) {
 	return r
 }
 
+function breed(b) {
+	switch (b) {
+		case 1:
+			b = "Legorne"
+			break;
+		case 2:
+			b = "Plymouth Rock"
+			break;
+		case 3:
+			b = "Orpington"
+			break;
+		case 4:
+			b = "Rhodia"
+			break;
+		case 5:
+			b = "Kadaknath"
+			break;
+		case 6:
+			b = "Brahma"
+			break;
+		case 7:
+			b = "Sedosa"
+			break;
+	}
+	return b
+}
+
 function renderImage(a, b) {
 	return "gw" + a + "_" + b
 }
 
 function renderBorder(a) {
 	return "b" + a
+}
+
+function renderColor(a) {
+	return "c" + a
 }
 
 
@@ -66,11 +97,12 @@ const Nfts = ({ nfts }) => {
 					<div class={renderBorder(nfts.rarity)}>
 						<p class={renderImage(nfts.breed, nfts.gender)}></p>
 					</div>
-					<h3>{rarity(nfts.rarity)}</h3>
-					<p> atk: {nfts.atk}</p>
-					<p> res: {nfts.res}</p>
-					<p> tipo: {gender(nfts.gender)}</p>
-					<p> breed: {nfts.breed}</p>
+					<h3 class={renderColor(nfts.rarity)}>#{nfts.id} {rarity(nfts.rarity)}</h3>
+					<p>{gender(nfts.gender)}</p>
+					<p>{breed(nfts.breed)}</p>
+					{nfts.gender == 2 ? <p> ATK: {nfts.atk} RES: {nfts.res}</p> : null }
+					{nfts.gender == 1 ? <p> PROD: {nfts.production}</p> : null }
+					
 				</Flex>
 			) : (
 				<p>Usuário não encontrado</p>

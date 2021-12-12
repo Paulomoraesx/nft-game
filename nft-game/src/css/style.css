@@ -56,3 +56,10 @@
         transform: rotate(-360deg);
     }
 }
+
+.borderimg1 { 
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url('../img/b.png') 20 round;
+  }
+  

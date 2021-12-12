@@ -188,6 +188,27 @@
   box-shadow: inset 20px 20px 20px #f76b0e8c;
 }
 
+.c1 {
+  color: #e0e0e0;
+  font-weight: bold;
+}
+.c2 {
+  color: #7fe91c8c;
+  font-weight: bold;
+}
+.c3 {
+  color: #0876a88c;
+  font-weight: bold;
+}
+.c4 {
+  color: #661ae08c;
+  font-weight: bold;
+}
+.c5 {
+  color: #f76b0e8c;
+  font-weight: bold;
+}
+
 
 
 @keyframes rotate {
