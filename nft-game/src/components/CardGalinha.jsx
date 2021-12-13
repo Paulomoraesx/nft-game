@@ -1,14 +1,10 @@
 import React from 'react'
-import { useMoralis } from 'react-moralis'
-import { Box, Center, Container, Flex, Grid, GridItem, Spacer, Text } from '@chakra-ui/layout';
+import { Box, Center, Container, Flex, Grid, GridItem, Text } from '@chakra-ui/layout';
 import NavMenu from './Layout/NavMenu';
-import { Button } from '@chakra-ui/button';
 import '../css/style.css'
 import '../css/chickens.css'
 import '../css/border.css'
-import axios from 'axios';
-import { BASE_URL } from '../Utils/requests';
-import { CONFIG } from '../Utils/config';
+import ModalMintBox from './ModalMintBox';
 
 const styles = {
 	cardVendaGalinha: {
@@ -26,29 +22,20 @@ const styles = {
 
 
 
-const mintBox = () => {
-	axios.get(`${BASE_URL}/mint/chicken/1`, CONFIG)
-		.then(response => {
-			console.log(response.data.rarity_name);
-		})
-		.catch(function (error) {
-			console.log(error);
-		})
-}
+
 
 export default function CardGalinha() {
-	const { Moralis } = useMoralis();
-	var galinhaNormal = "0.07"
-	var galinhaRara = "0.1"
-
-	const transferBSC = (valor) => {
-		Moralis.transfer({
-			type: "native",
-			amount: Moralis.Units.ETH(valor),
-			receiver: "0xab609B70271b768e592B48028c211E12FCE3184D"
-		});
-	}
-
+	/* 	const { Moralis } = useMoralis();
+		var galinhaNormal = "0.07"
+		var galinhaRara = "0.1"
+	
+		const transferBSC = (valor) => {
+			Moralis.transfer({
+				type: "native",
+				amount: Moralis.Units.ETH(valor),
+				receiver: "0xab609B70271b768e592B48028c211E12FCE3184D"
+			});
+		} */
 
 	return (
 		<>
@@ -58,18 +45,18 @@ export default function CardGalinha() {
 			</Text>
 			<Container>
 				<Center>
-					<Grid templateColumns="repeat(4, 1fr)">
-						<GridItem colSpan={1}>
+					<Grid templateColumns="repeat(1)">
+						{/* 						<GridItem colSpan={1}>
 							<Flex align="center"
 								justify="center"
 								direction="column"
 								p={10}
 								style={styles.cardVendaGalinha}>
-									<Box p={1} mt={5} style={styles.ajustarAoCentro}>
-								<div class="b1">
-									<div className="gp7_2" />
-								</div>
-								
+								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
+									<div class="b1">
+										<div className="gp7_2" />
+									</div>
+
 									<Text>Galinha Normal</Text>
 									<Text>0,07 BNB</Text>
 									<Button mt={5}
@@ -85,7 +72,6 @@ export default function CardGalinha() {
 								p={10}
 								style={styles.cardVendaGalinha}>
 								<div className="gw2_1" />
-								{/* <Image style={{ marginLeft: "40px" }} width={75} src={galinha2} /> */}
 								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
 									<Text>Galinha Rara</Text>
 									<Text>0,1 BNB</Text>
@@ -93,7 +79,7 @@ export default function CardGalinha() {
 										onClick={() => transferBSC(galinhaRara)}>Comprar</Button>
 								</Box>
 							</Flex>
-						</GridItem>
+						</GridItem> */}
 						<GridItem colSpan={1}>
 							<Flex align="center"
 								justify="center"
@@ -105,8 +91,7 @@ export default function CardGalinha() {
 								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
 									<Text>BOX - RANDOM</Text>
 									<Text>250 EGGCOIN</Text>
-									<Button mt={5}
-										onClick={() => mintBox()}>Comprar</Button>
+									<ModalMintBox />
 								</Box>
 							</Flex>
 						</GridItem>

@@ -1,12 +1,9 @@
 import { Container, Flex, Grid, GridItem, Text } from '@chakra-ui/layout'
 import React, { useEffect, useState } from 'react'
 import NavMenu from '../components/Layout/NavMenu'
-import CardMkt from '../components/CardMkt'
-import SideMenu from '../components/Layout/SideMenu'
 import axios from 'axios'
 import { BASE_URL } from '../Utils/requests'
 import { CONFIG } from '../Utils/config'
-import { Button } from '@chakra-ui/react'
 import '../css/chickens.css'
 import '../css/border.css'
 
@@ -19,6 +16,8 @@ function gender(g) {
 		case 2:
 			g = "Galo"
 			break;
+		default:
+			console.log(`Sorry`);
 	}
 	return g
 }
@@ -41,6 +40,8 @@ function rarity(r) {
 		case 5:
 			r = "Legendary"
 			break;
+		default:
+			console.log(`Sorry`);
 	}
 	return r
 }
@@ -68,6 +69,8 @@ function breed(b) {
 		case 7:
 			b = "Sedosa"
 			break;
+		default:
+			console.log(`Sorry`);
 	}
 	return b
 }
@@ -100,9 +103,9 @@ const Nfts = ({ nfts }) => {
 					<h3 class={renderColor(nfts.rarity)}>#{nfts.id} {rarity(nfts.rarity)}</h3>
 					<p>{gender(nfts.gender)}</p>
 					<p>{breed(nfts.breed)}</p>
-					{nfts.gender == 2 ? <p> ATK: {nfts.atk} RES: {nfts.res}</p> : null }
-					{nfts.gender == 1 ? <p> PROD: {nfts.production}</p> : null }
-					
+					{nfts.gender === 2 ? <p> ATK: {nfts.atk} RES: {nfts.res}</p> : null}
+					{nfts.gender === 1 ? <p> PROD: {nfts.production}</p> : null}
+
 				</Flex>
 			) : (
 				<p>Usuário não encontrado</p>
@@ -119,6 +122,8 @@ export default function NftsWallet() {
 		axios.get(`${BASE_URL}/owner/nft`, CONFIG)
 			.then(response => {
 				setLista(response.data)
+			}).catch(function (error) {
+				console.log(error);
 			})
 	}
 
