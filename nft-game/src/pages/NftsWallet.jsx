@@ -6,86 +6,7 @@ import { BASE_URL } from '../Utils/requests'
 import { CONFIG } from '../Utils/config'
 import '../css/chickens.css'
 import '../css/border.css'
-
-
-function gender(g) {
-	switch (g) {
-		case 1:
-			g = "Galinha"
-			break;
-		case 2:
-			g = "Galo"
-			break;
-		default:
-			console.log(`Sorry`);
-	}
-	return g
-}
-
-
-function rarity(r) {
-	switch (r) {
-		case 1:
-			r = "Common"
-			break;
-		case 2:
-			r = "Rare"
-			break;
-		case 3:
-			r = "Super Rare"
-			break;
-		case 4:
-			r = "Epic"
-			break;
-		case 5:
-			r = "Legendary"
-			break;
-		default:
-			console.log(`Sorry`);
-	}
-	return r
-}
-
-function breed(b) {
-	switch (b) {
-		case 1:
-			b = "Legorne"
-			break;
-		case 2:
-			b = "Plymouth Rock"
-			break;
-		case 3:
-			b = "Orpington"
-			break;
-		case 4:
-			b = "Rhodia"
-			break;
-		case 5:
-			b = "Kadaknath"
-			break;
-		case 6:
-			b = "Brahma"
-			break;
-		case 7:
-			b = "Sedosa"
-			break;
-		default:
-			console.log(`Sorry`);
-	}
-	return b
-}
-
-function renderImage(a, b) {
-	return "gw" + a + "_" + b
-}
-
-function renderBorder(a) {
-	return "b" + a
-}
-
-function renderColor(a) {
-	return "c" + a
-}
+import { rarity, gender, breed, renderImage, renderBorder, renderColor } from '../Utils/buildImg'
 
 
 const Nfts = ({ nfts }) => {
@@ -97,10 +18,10 @@ const Nfts = ({ nfts }) => {
 					align="center"
 					justify="center"
 					direction="column" p={5} borderWidth="1px" borderRadius="lg">
-					<div class={renderBorder(nfts.rarity)}>
-						<p class={renderImage(nfts.breed, nfts.gender)}></p>
+					<div className={renderBorder(nfts.rarity)}>
+						<p className={renderImage(nfts.breed, nfts.gender)}></p>
 					</div>
-					<h3 class={renderColor(nfts.rarity)}>#{nfts.id} {rarity(nfts.rarity)}</h3>
+					<h3 className={renderColor(nfts.rarity)}>#{nfts.id} {rarity(nfts.rarity)}</h3>
 					<p>{gender(nfts.gender)}</p>
 					<p>{breed(nfts.breed)}</p>
 					{nfts.gender === 2 ? <p> ATK: {nfts.atk} RES: {nfts.res}</p> : null}

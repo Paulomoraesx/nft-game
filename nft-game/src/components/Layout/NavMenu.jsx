@@ -44,7 +44,7 @@ export default function NavMenu() {
                         {isAuthenticated ? <Button><Link to="/marketPlace">MarketPlace</Link></Button> : null}
                         {isAuthenticated ? <Button><Link to="/exchange">Exchange</Link></Button> : null}
                         {isAuthenticated ? <Button><Link to="/nftsWallet">ListarNFTS</Link></Button> : null}
-                        <Button onClick={() => verificarSeLogouParaPegarToken()}>testarToken</Button>
+                        {isAuthenticated ? <Button><Link to="/playGame">Play</Link></Button> : null}
                     </HStack>
                 </Menu>
             </Box>

@@ -5,6 +5,7 @@ import Exchange from './pages/Exchange';
 import CardGalinha from './components/CardGalinha';
 import MarketPlace from './pages/MarketPlace';
 import NftsWallet from './pages/NftsWallet';
+import PlayGame from './pages/Game/PlayGame';
 
 const Routes = () => {
     return (
@@ -27,6 +28,9 @@ const Routes = () => {
                 </Route>
                 <Route path="/nftsWallet">
                     <NftsWallet />
+                </Route>
+                <Route path="/playGame">
+                    <PlayGame />
                 </Route>
 
 

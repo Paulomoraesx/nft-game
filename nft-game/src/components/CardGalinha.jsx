@@ -5,6 +5,7 @@ import '../css/style.css'
 import '../css/chickens.css'
 import '../css/border.css'
 import ModalMintBox from './ModalMintBox';
+import ErrorBox from './ErrorBox';
 
 const styles = {
 	cardVendaGalinha: {
