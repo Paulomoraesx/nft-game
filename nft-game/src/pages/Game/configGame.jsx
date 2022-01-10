@@ -1,24 +1,21 @@
 import Phaser from "phaser"
 
+import TitleScreen from "./Scenes/TitleScreen"
+import Game from "./Scenes/GameScene"
+
 export const configGame = {
-    width: 800,
-    height: 500,
+    width: 650,
+    height: 650,
     type: Phaser.AUTO,
-    scene: {
-        preload: preload,
-        create: create,
-        update: update
+    physics: {
+        default: 'arcade',
     }
 }
 
 export const game = new Phaser.Game(configGame)
 
-function preload() {
+game.scene.add('titlescreen', TitleScreen)
+game.scene.add('game', Game)
 
-}
-function create() {
-
-}
-function update() {
-
-}
+/* game.scene.start('titlescreen') */
+game.scene.start('game')

@@ -48,24 +48,6 @@ export default function CardGalinha() {
 				<Center>
 					<Grid templateColumns="repeat(1)">
 						{/* 						<GridItem colSpan={1}>
-							<Flex align="center"
-								justify="center"
-								direction="column"
-								p={10}
-								style={styles.cardVendaGalinha}>
-								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
-									<div class="b1">
-										<div className="gp7_2" />
-									</div>
-
-									<Text>Galinha Normal</Text>
-									<Text>0,07 BNB</Text>
-									<Button mt={5}
-										onClick={() => transferBSC(galinhaNormal)}>Comprar</Button>
-								</Box>
-							</Flex>
-						</GridItem>
-						<Spacer />
 						<GridItem colSpan={1}>
 							<Flex align="center"
 								justify="center"

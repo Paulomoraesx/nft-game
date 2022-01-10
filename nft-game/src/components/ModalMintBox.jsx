@@ -24,17 +24,23 @@ export default function ModalMintBox() {
     const [erro, setErro] = useState(false)
 
     const mintBox = () => {
-        axios.get(`${BASE_URL}/mint/chicken/1`, CONFIG)
-            .then(response => {
+        axios.get(`${BASE_URL}/mint/chicken/1`,
+            {
+                headers: {
+                    Authorization: "Bearer " + localStorage.getItem('token')
+                }
+            }).then(response => {
                 setNft(response.data);
+                console.log(localStorage.getItem('token'))
                 onOpen()
             })
             .catch(function (error) {
                 setErro(true)
                 console.log("entrou")
+                console.log(localStorage.getItem('token'))
                 setOpen('isOpen')
                 onOpen()
-                console.log(erro)
+                console.log(error)
             })
     }
 

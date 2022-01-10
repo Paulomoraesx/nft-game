@@ -47,6 +47,7 @@ export default function Auth() {
                 }
                 <Box m="5">
                     <Heading mt="5" >
+
                         <Center>Bem vindo ao galinheiro</Center>
                     </Heading>
                     <Heading >{user ? user.attributes.username :

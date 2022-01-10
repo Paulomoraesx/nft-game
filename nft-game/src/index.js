@@ -14,8 +14,8 @@ const theme = extendTheme({
   }
 });
 
-const APP_ID = "qJQxveOuZtlafl974RxHtT91Zz5JmOKwKp4vw1ZI";
-const SERVER_URL = "https://c62e8fhsxat5.usemoralis.com:2053/server";
+const APP_ID = "EKHaHHVNDPkBFNM10AY1aHF0MepQOvEalbeRyB3T";
+const SERVER_URL = "https://mgbm6tvjqk6o.usemoralis.com:2053/server";
 
 const Application = () => {
   const isServerInfo = APP_ID && SERVER_URL ? true : false;
