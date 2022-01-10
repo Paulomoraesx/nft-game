@@ -1,4 +1,4 @@
-import { AlertDialog, AlertDialogBody, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, Box, Button, Center, Container, Flex, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from '@chakra-ui/react'
+import { Alert, AlertDialog, AlertDialogBody, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, AlertIcon, AlertTitle, Box, Button, Center, Container, Flex, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../Utils/requests'
@@ -23,8 +23,8 @@ export default function ModalMintBox() {
     const [nft, setNft] = useState('')
     const [erro, setErro] = useState(false)
 
-    const mintBox = () => {
-        axios.get(`${BASE_URL}/mint/chicken/1`,
+    const mintHenHouse = () => {
+        axios.get(`${BASE_URL}/mint/henhouse/2`,
             {
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem('token')
@@ -43,28 +43,32 @@ export default function ModalMintBox() {
 
     return (
         <>
-            <Button mt={5} onClick={() => mintBox()}>Comprar</Button>
+            <Button mt={5} onClick={() => mintHenHouse()}>Comprar</Button>
             {nft ? <Modal isOpen={isOpen} onClose={onClose} size={'xl'}>
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader textAlign={'center'}>Congrats you got a {breed(rarity(nft.rarity))} type {gender(nft.gender)}</ModalHeader>
+                    <ModalHeader>
+                        Congrats!!</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                         <Container style={styleContainer.ajustarAoCentro}>
-                            <Flex minH={200} minW={100} w={100}
-                                align="center"
-                                justify="center"
-                                direction="column"
-                                p={5} borderWidth="1px" borderRadius="lg"
-                                className={renderBorder(nft.rarity)}>
-                                <Box p={2} m={2}>
-                                    <Heading className={renderImage(nft.breed, nft.gender)}></Heading>
-                                    <Heading className={renderColor(nft.rarity)}></Heading>
-                                </Box>
-                                <Heading size='sm'>{gender(nft.gender)}</Heading>
-                                <Heading size='sm'>{breed(nft.breed)}</Heading>
-                                {nft.gender === 2 ? <Heading size='sm'> ATK: {nft.atk} RES: {nft.res}</Heading> : null}
-                                {nft.gender === 1 ? <Heading size='sm'> PROD: {nft.production}</Heading> : null}
+                            <Flex
+                            >
+                                <Alert
+                                    status='success'
+                                    variant='subtle'
+                                    flexDirection='column'
+                                    alignItems='center'
+                                    justifyContent='center'
+                                    textAlign='center'
+                                    height='200px'
+                                >
+                                    <AlertIcon boxSize='40px' mr={0} />
+                                    <AlertTitle mt={4} mb={1} fontSize='lg'>
+                                        Henhouse successfully obtained
+                                    </AlertTitle>
+                                </Alert>
+
                             </Flex>
                         </Container>
                     </ModalBody>
@@ -94,7 +98,7 @@ export default function ModalMintBox() {
                     </AlertDialogContent>
                 </AlertDialogOverlay>
             </AlertDialog> : <Container borderWidth="1px" borderRadius="lg"
-                p={2} m={4} ><Heading size={'sm'} textAlign={'center'} > Clique no Botão Acima para comprar seu NFT </Heading>
+                p={2} m={4} ><Heading size={'sm'} textAlign={'center'} > Clique no Botão Acima para comprar sua Henhouse </Heading>
             </Container>
             }
 

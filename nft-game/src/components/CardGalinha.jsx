@@ -5,7 +5,9 @@ import '../css/style.css'
 import '../css/chickens.css'
 import '../css/border.css'
 import ModalMintBox from './ModalMintBox';
+import ModalMintHenHouse from './ModalMintHenHouse';
 import ErrorBox from './ErrorBox';
+import henhouseimg from './../img/ImgHenHouseMini.png'
 
 const styles = {
 	cardVendaGalinha: {
@@ -46,7 +48,7 @@ export default function CardGalinha() {
 			</Text>
 			<Container>
 				<Center>
-					<Grid templateColumns="repeat(1)">
+					<Grid templateColumns="repeat(3, 1fr)">
 						{/* 						<GridItem colSpan={1}>
 						<GridItem colSpan={1}>
 							<Flex align="center"
@@ -75,6 +77,22 @@ export default function CardGalinha() {
 									<Text>BOX - RANDOM</Text>
 									<Text>250 EGGCOIN</Text>
 									<ModalMintBox />
+								</Box>
+							</Flex>
+						</GridItem>
+						<GridItem colSpan={1}>
+							<Flex align="center"
+								justify="center"
+								direction="column"
+								p={10}
+								style={styles.cardVendaGalinha}>
+								<div>
+									<img src={henhouseimg} alt="henhouse" />
+								</div>
+								<Box p={1} mt={5} style={styles.ajustarAoCentro}>
+									<Text>HENHOUSE</Text>
+									<Text>1000 EGGCOIN</Text>
+									<ModalMintHenHouse />
 								</Box>
 							</Flex>
 						</GridItem>
