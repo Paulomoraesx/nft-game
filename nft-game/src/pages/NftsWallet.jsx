@@ -1,4 +1,4 @@
-import { Container, Flex, Grid, GridItem, Text } from '@chakra-ui/layout'
+import { Container, Flex, Grid, GridItem, Text, Stack, Box } from '@chakra-ui/layout'
 import React, { useEffect, useState } from 'react'
 import NavMenu from '../components/Layout/NavMenu'
 import axios from 'axios'
@@ -7,8 +7,7 @@ import { CONFIG } from '../Utils/config'
 import '../css/chickens.css'
 import '../css/border.css'
 import { rarity, gender, breed, renderImage, renderBorder, renderColor } from '../Utils/buildImg'
-import SideMenu from '../components/Layout/SideMenu'
-import { Button } from '@chakra-ui/react'
+import { Button, Radio, RadioGroup } from '@chakra-ui/react'
 
 
 const Nfts = ({ nfts }) => {
@@ -36,8 +35,11 @@ const Nfts = ({ nfts }) => {
 	);
 };
 
+
 export default function NftsWallet() {
 	var [lista, setLista] = useState([])
+	var [listaOrdenada, setListaOrdenada] = useState([])
+	var [checkOrdenacao, setCheckOrdenacao] = useState(false)
 
 	const listNfts = () => {
 		axios.get(`${BASE_URL}/owner/nft`, {
@@ -58,6 +60,28 @@ export default function NftsWallet() {
 	})
 
 
+	const ordenarNftsPorRaridade = (raridade) => {
+		setCheckOrdenacao(true)
+
+		if (raridade === "Maior Raridade") {
+			setListaOrdenada(lista.sort(function (a, b) {
+				if (a.rarity > b.rarity) {
+					return -1;
+				} else {
+					return true
+				}
+			}))
+		} else {
+			setListaOrdenada(lista.sort(function (a, b) {
+				if (a.rarity < b.rarity) {
+					return -1;
+				} else {
+					return true
+				}
+			}))
+		}
+	}
+
 	return (
 		<>
 			<NavMenu />
@@ -65,14 +89,24 @@ export default function NftsWallet() {
 			>Your's NFTs</Text>
 			<Container p={2} maxW="container.xl" borderWidth="1px" borderRadius="lg">
 				<Grid templateColumns="repeat(5, 1fr)">
-					<GridItem p={5} ml={10} colSpan={1}>
-						<SideMenu />
+					<GridItem p={5} ml={5} colSpan={1}>
+						<Text ml={5}>Ordernar 	por Raridade:</Text>
+						<Box p={3} borderWidth='1px' borderRadius='lg' overflow='hidden'>
+							<RadioGroup defaultValue='1'>
+								<Stack>
+									<Radio value='2' onClick={() => ordenarNftsPorRaridade("Maior Raridade")}>Maior</Radio>
+									<Radio value='3' onClick={() => ordenarNftsPorRaridade("Menor Raridade")}>Menor</Radio>
+								</Stack>
+							</RadioGroup>
+						</Box>
 					</GridItem>
 					<GridItem colSpan={4}>
 						<Container p={5} maxW='1000px' borderWidth="1px" borderRadius="lg">
 							<Grid templateColumns='repeat(3, 1fr)' gap={3}>
-								{Array.isArray(lista) && lista.map((nfts) =>
-									<Nfts nfts={nfts} key={nfts.id} />)}
+								{checkOrdenacao === false ? Array.isArray(lista) && lista.map((nfts) =>
+									<Nfts nfts={nfts} key={nfts.id} />) :
+									Array.isArray(listaOrdenada) && listaOrdenada.map((nfts) =>
+										<Nfts nfts={nfts} key={nfts.id} />)}
 							</Grid>
 						</Container>
 					</GridItem>
