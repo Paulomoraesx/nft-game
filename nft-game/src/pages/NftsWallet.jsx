@@ -12,12 +12,12 @@ import { Button, Radio, RadioGroup } from '@chakra-ui/react'
 
 const Nfts = ({ nfts }) => {
 	return (
-		<Container display={"flex"} flexDirection={"column"}>
+		<Container>
 			{nfts ? (
 				<Flex
+					direction={'column'}
 					align="center"
-					justify="center"
-					direction="column" p={5} borderWidth="1px" borderRadius="lg">
+					justify="center" p={5} borderWidth="1px" borderRadius="lg">
 					<div className={renderBorder(nfts.rarity)}>
 						<p className={renderImage(nfts.breed, nfts.gender)}></p>
 					</div>
